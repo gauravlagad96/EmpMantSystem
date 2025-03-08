@@ -1,5 +1,7 @@
 package com.repository;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -21,4 +23,11 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 		return value > 0 ? true : false;
 	}
 
+	@Override
+	public List<Employee> viewAllEmployees() {
+		String sql = "SELECT * FROM employee";
+		return template.query(sql, (rs, rowNum) -> new Employee(rs.getInt("eid"), rs.getString("name"),
+				rs.getString("email"), rs.getString("contact")));
+
+	}
 }

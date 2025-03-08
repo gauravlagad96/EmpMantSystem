@@ -30,7 +30,7 @@
 			<ul class="hidden lg:flex gap-6 text-lg">
 				<li><a href="register" class="hover:text-gray-300">Add
 						Employee</a></li>
-				<li><a href="view" class="hover:text-gray-300">View
+				<li><a href="viewAllEmp" class="hover:text-gray-300">View
 						Employees</a></li>
 				<li><a href="search" class="hover:text-gray-300">Search
 						Employee</a></li>
@@ -41,7 +41,7 @@
 			<ul class="flex flex-col text-center py-4 text-lg">
 				<li class="py-2"><a href="register"
 					class="block hover:text-gray-400">Add Employee</a></li>
-				<li class="py-2"><a href="view"
+				<li class="py-2"><a href="viewAllEmp"
 					class="block hover:text-gray-400">View Employees</a></li>
 				<li class="py-2"><a href="search"
 					class="block hover:text-gray-400">Search Employee</a></li>

@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" %>
-<%@ page isELIgnored="false" %>  <%-- Ensure EL is enabled --%>
-	
+	pageEncoding="UTF-8"%>
+<%@ page isELIgnored="false"%>
+<%-- Ensure EL is enabled --%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,8 +48,20 @@
 				Add New Employee</button>
 		</form>
 	</div>
-	<p>Message: ${msg}</p>
 
+
+
+	<!-- Display Message -->
+	<p class="text-center text-green-600 font-semibold mt-4 " id="msg">${msg}</p>
+
+	<script>
+		setTimeout(function() {
+			var msg = document.getElementById("msg");
+			if (msg) {
+				msg.innerHTML = ""; // Clears the message
+			}
+		}, 3000);
+	</script>
 
 </body>
 </html>
